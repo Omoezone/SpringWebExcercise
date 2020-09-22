@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<h1>OVERSKIRFT</h1>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+        </tr>
+        <tr th:each="item: ${products}">
+            <td th:text="${item.product_id}"/>
+            <td th:text="${item.product_name}"/>
+            <td th:text="${item.product_desc}"/>
+            <td th:text="${item.product_price}"/>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+
+</body>
+</html>
