@@ -19,4 +19,9 @@ public class ProductRepo {
         RowMapper<Product> rowMapper = new BeanPropertyRowMapper<>(Product.class);
         return template.query(sql,rowMapper);
     }
+    public boolean delete(int id){
+        String sql = "DELETE FROM products WHERE product_id = ?";
+        RowMapper<Product> rowMapper = new BeanPropertyRowMapper<>(Product.class);
+        return template.update(sql, id) < 0;
+    }
 }
