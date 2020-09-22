@@ -16,4 +16,5 @@ public class ProductService {
     public List<Product> fetchAll(){
         return repo.fetchAll();
     }
+    public Product add(Product product){return repo.add(product);}
 }
