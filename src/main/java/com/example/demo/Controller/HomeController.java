@@ -25,12 +25,12 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/create") String createProduct(){ return "/productCreate"; }
+    @GetMapping("/create") String productCreate(){ return "productCreate"; }
 
-    @PostMapping("/create")
-    String createProduct(@ModelAttribute Product product){
+    @PostMapping("/productCreate")
+    String productCreate(@ModelAttribute Product product){
         Prodservice.add(product);
-        return "redirect:/index";
+        return "redirect:/";
     }
     @GetMapping("/delete/{product_id}")
     public String delete(@PathVariable("product_id") int id){

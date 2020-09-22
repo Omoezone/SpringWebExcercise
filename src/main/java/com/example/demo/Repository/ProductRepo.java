@@ -26,7 +26,7 @@ public class ProductRepo {
     }
 
     public Product add(Product product) {
-        String sql = "INSERT INTO products(product_id,product_name,product_desc,product_price) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO products (product_id,product_name,product_desc,product_price) VALUES(?,?,?,?)";
         template.update(sql, product.getProduct_id(), product.getProduct_name(), product.getProduct_desc(),product.getProduct_price());
         return null;
     }
