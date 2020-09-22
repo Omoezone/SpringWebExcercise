@@ -19,4 +19,5 @@ public class ProductService {
     public boolean delete(int id){
         return repo.delete(id);
     }
+    public Product add(Product product){return repo.add(product);}
 }
