@@ -21,6 +21,11 @@
             <td th:text="${item.product_name}"/>
             <td th:text="${item.product_desc}"/>
             <td th:text="${item.product_price}"/>
+            <td>
+                <a th:href="@{'/delete/'+${item.product_id}}">
+                    <button>Delete</button>
+                </a>
+            </td>
         </tr>
         </thead>
     </table>
