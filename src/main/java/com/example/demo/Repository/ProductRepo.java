@@ -30,4 +30,14 @@ public class ProductRepo {
         template.update(sql, product.getProduct_id(), product.getProduct_name(), product.getProduct_desc(),product.getProduct_price());
         return null;
     }
+    public Product findById(int id){
+        String sql = "SELECT * FROM products WHERE product_id = ?";
+        RowMapper<Product> rowMapper = new BeanPropertyRowMapper<>(Product.class);
+        return template.queryForObject(sql,rowMapper,id);
+    }
+    public Product update(Product product){
+        String sql = "UPDATE products SET product_name = ?,product_desc = ?,product_price = ? WHERE product_id = ?";
+        template.update(sql,product.getProduct_name(),product.getProduct_desc(),product.getProduct_price(),product.getProduct_id());
+        return null;
+    }
 }
