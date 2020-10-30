@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
 <body>
 
-<h1>OVERSKRIFT</h1>
+<h1 >Vores Webshop <span class="badge badge-secondary">Nyåbnet</span></h1>
 <div>
     <a href = "/create">
         <button class="button"><span>Create new product</span></button>
     </a>
-    <table>
-        <thead>
+    <table class="table table-striped">
+        <thead class="thead-dark">
         <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Description</td>
-            <td>Price</td>
+            <th class="col">ID</th>
+            <th class="col">Name</th>
+            <th class="col">Description</th>
+            <th class="col">Price</th>
         </tr>
         <tr th:each="item: ${products}">
             <td th:text="${item.product_id}"/>
@@ -26,7 +27,7 @@
             <td th:text="${item.product_price}"/>
             <td>
                 <a th:href="@{'/delete/'+${item.product_id}}">
-                    <button>Delete</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
                 </a>
                 <a th:href="@{'/productUpdate/'+${item.product_id}}">
                     <button>Update info</button>
