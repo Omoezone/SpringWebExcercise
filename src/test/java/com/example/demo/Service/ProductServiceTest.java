@@ -1,6 +1,8 @@
+/*
 package com.example.demo.Service;
 
 import com.example.demo.Model.Product;
+import com.example.demo.Repository.ProductRepo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -11,7 +13,7 @@ import org.mockito.MockitoAnnotations;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductServiceTest {
-   /* @InjectMocks
+    @InjectMocks
     ProductService mockProductService;
 
     @Mock
@@ -27,5 +29,5 @@ class ProductServiceTest {
     public void getProductPrice(){
         Product product = new Product(5, "Gummiged", "Stor ged lavet af gummi", 100.0);
 //        Mockito.when();
-    }*/
-}
+    }
+}*/
