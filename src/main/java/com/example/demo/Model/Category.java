@@ -5,7 +5,6 @@ import java.util.Set;
 
 
 @Entity
-
 public class Category {
 
     @Id
