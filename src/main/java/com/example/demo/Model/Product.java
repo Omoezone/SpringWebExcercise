@@ -1,10 +1,8 @@
 package com.example.demo.Model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Product {
@@ -14,6 +12,9 @@ public class Product {
     private String product_name;
     private String product_desc;
     private double product_price;
+
+    @ManyToOne
+    private Category category;
 
     public Product(int product_id, String product_name, String product_desc, double product_price) {
         this.product_id = product_id;
