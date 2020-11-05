@@ -18,4 +18,7 @@ INSERT INTO note (desc, product_product_id)
     VALUES ('Remember your lighter', 1);
 INSERT INTO note (desc, product_product_id)
     VALUES ('First one is free', 1);
+INSERT INTO note (desc, product_product_id)
+VALUES ('This was made to fuck with poor people', 2);
 
+-- SELECT product_id AS ID,  product_name AS name, product_desc AS description, product_price AS price, n.desc AS notes, c.description AS category FROM PRODUCT p LEFT JOIN NOTE n ON p.product_id = n.product_product_id INNER JOIN CATEGORY c ON p.category_id =  c.id;
