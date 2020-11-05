@@ -16,7 +16,7 @@ public class Product {
     @ManyToOne
     private Category category;
 
-    @OneToMany
+    @OneToMany(mappedBy = "product")
     Set<Note> notes;
 
     public Product() {

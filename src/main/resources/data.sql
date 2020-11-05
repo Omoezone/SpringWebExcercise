@@ -11,7 +11,7 @@ INSERT INTO product (product_name, product_desc, product_price)
     VALUES ('LSD','Very Niiice',250.00);
 
 UPDATE product SET category_id = 4 WHERE product_id = 1;
-UPDATE product SET category_id = 4 WHERE product_id = 2;
+UPDATE product SET category_id = 1 WHERE product_id = 2;
 UPDATE product SET category_id = 1 WHERE product_id = 3;
 
 INSERT INTO note (desc, product_product_id)
@@ -28,3 +28,4 @@ INSERT INTO company (name,product_product_id)
 INSERT INTO company (name,product_product_id)
     VALUES ('KEA',3);
 
+-- SELECT product_id AS ID,  product_name AS name, product_desc AS description, product_price AS price, n.desc AS notes, c.description AS category, com.name AS Supplier FROM PRODUCT p LEFT JOIN NOTE n ON p.product_id = n.product_product_id INNER JOIN CATEGORY c ON p.category_id =  c.id INNER JOIN COMPANY com ON p.product_id =  com.product_product_id;
