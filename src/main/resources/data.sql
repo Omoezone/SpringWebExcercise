@@ -21,4 +21,14 @@ INSERT INTO note (desc, product_product_id)
 INSERT INTO note (desc, product_product_id)
 VALUES ('This was made to fuck with poor people', 2);
 
--- SELECT product_id AS ID,  product_name AS name, product_desc AS description, product_price AS price, n.desc AS notes, c.description AS category FROM PRODUCT p LEFT JOIN NOTE n ON p.product_id = n.product_product_id INNER JOIN CATEGORY c ON p.category_id =  c.id;
+INSERT INTO company (id, name)
+    VALUES (1, 'Bandidos');
+INSERT INTO company (id,name)
+    VALUES (2, 'Hells Angels');
+INSERT INTO company (id, name)
+    VALUES (3, 'KEA');
+
+UPDATE company SET product_id = 4 WHERE id = 1;
+UPDATE company SET product_id = 2 WHERE id = 2;
+UPDATE company SET product_id = 1 WHERE id = 3;
+
