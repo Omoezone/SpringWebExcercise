@@ -13,3 +13,9 @@ INSERT INTO product (product_name, product_desc, product_price)
 UPDATE product SET category_id = 4 WHERE product_id = 1;
 UPDATE product SET category_id = 4 WHERE product_id = 2;
 UPDATE product SET category_id = 1 WHERE product_id = 3;
+
+INSERT INTO note (desc, product_product_id)
+    VALUES ('Remember your lighter', 1);
+INSERT INTO note (desc, product_product_id)
+    VALUES ('First one is free', 1);
+

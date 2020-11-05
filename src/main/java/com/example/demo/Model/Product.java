@@ -8,7 +8,7 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int product_id;
+    private Long product_id;
     private String product_name;
     private String product_desc;
     private double product_price;
@@ -16,19 +16,26 @@ public class Product {
     @ManyToOne
     private Category category;
 
-    public Product(int product_id, String product_name, String product_desc, double product_price) {
+    @OneToMany
+    Set<Note> notes;
+
+    public Product() {
+    }
+
+    public Product(Long product_id, String product_name, String product_desc, double product_price, Category category, Set<Note> notes) {
         this.product_id = product_id;
         this.product_name = product_name;
         this.product_desc = product_desc;
         this.product_price = product_price;
+        this.category = category;
+        this.notes = notes;
     }
-    public Product(){}
 
-    public int getProduct_id() {
+    public Long getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(int product_id) {
+    public void setProduct_id(Long product_id) {
         this.product_id = product_id;
     }
 
@@ -54,5 +61,21 @@ public class Product {
 
     public void setProduct_price(double product_price) {
         this.product_price = product_price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Set<Note> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Set<Note> notes) {
+        this.notes = notes;
     }
 }
