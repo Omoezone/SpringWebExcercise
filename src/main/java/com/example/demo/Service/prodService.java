@@ -15,7 +15,7 @@ public class prodService {
     ProdRepo prodRepo;
 
     // Denne findbyId er optional
-    public Product findbyId(long id){
+    public Product findById(long id){
         Optional<Product> opProd = prodRepo.findById(id);
         // hvis ingen product der matcher det søgte id, vil der blive kastet en fejl
         if(!opProd.isPresent()){

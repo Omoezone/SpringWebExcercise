@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ProdRepo extends CrudRepository<Product, Long> {
 
-   // Optional<Product> findById(int id);
+//    Optional<Product> findById(long id);
    // Set<Product> findAll();
    // Set<Product> findAllByXxx(String x);
 
