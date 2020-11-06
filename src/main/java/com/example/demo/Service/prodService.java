@@ -1,5 +1,6 @@
-package com.example.demo.Model;
+package com.example.demo.Service;
 
+import com.example.demo.Model.Product;
 import com.example.demo.Repository.ProdRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,7 @@ public class prodService {
     // ved update skal id være sat
     public void update(Product product) { prodRepo.save(product); }
 
-    public void delete(Long id) { prodRepo.deleteById(id); }
+    public void delete(Long id) {
+        prodRepo.deleteById(id);
+    }
 }

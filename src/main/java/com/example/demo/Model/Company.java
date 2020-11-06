@@ -10,7 +10,7 @@ public class Company {
 
     private String name;
 
-    @OneToOne
+    @OneToOne(optional = true, cascade = CascadeType.ALL, orphanRemoval = true)
     private Product product;
 
     public Company() {

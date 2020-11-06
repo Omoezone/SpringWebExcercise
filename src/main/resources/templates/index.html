@@ -26,7 +26,7 @@
             <td th:text="${item.product_desc}"/>
             <td th:text="${item.product_price}"/>
             <td>
-                <a th:href="@{'/delete/'+${item.product_id}}">
+                <a th:href="@{'/deleteProd/'+${item.product_id}}">
                     <button type="button" class="btn btn-danger">Delete</button>
                 </a>
                 <a th:href="@{'/productUpdate/'+${item.product_id}}">
