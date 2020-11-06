@@ -16,7 +16,7 @@ public class Product {
     @ManyToOne
     private Category category;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "product")
     Set<Note> notes;
 
     public Product() {
